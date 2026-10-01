@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360">
+  <defs>
+    <linearGradient id="plume" x1="400" y1="0" x2="20" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff6e6"/>
+      <stop offset="0.08" stop-color="#ffd9a0"/>
+      <stop offset="0.3" stop-color="#f39a3c"/>
+      <stop offset="0.6" stop-color="#e889a8" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#d79ac0" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="steel" x1="0" y1="156" x2="0" y2="204" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f4efe6"/>
+      <stop offset="0.45" stop-color="#cac2b3"/>
+      <stop offset="1" stop-color="#8e8a86"/>
+    </linearGradient>
+    <linearGradient id="tiles" x1="0" y1="156" x2="0" y2="204" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5a6068"/>
+      <stop offset="0.25" stop-color="#2c323a"/>
+      <stop offset="1" stop-color="#1c1f24"/>
+    </linearGradient>
+    <filter id="wide" x="-30%" y="-150%" width="160%" height="400%"><feGaussianBlur stdDeviation="24"/></filter>
+    <filter id="soft" x="-30%" y="-150%" width="160%" height="400%"><feGaussianBlur stdDeviation="8"/></filter>
+    <filter id="rim" x="-10%" y="-60%" width="120%" height="220%"><feGaussianBlur stdDeviation="3"/></filter>
+  </defs>
+
+  <!-- Raptor plume -->
+  <path d="M400 150 C300 132 150 146 10 180 C150 214 300 228 400 210 Z" fill="url(#plume)" filter="url(#wide)"/>
+  <path d="M400 156 C310 146 170 158 40 180 C170 202 310 214 400 204 Z" fill="url(#plume)" filter="url(#soft)"/>
+  <path d="M400 163 C330 158 220 166 120 180 C220 194 330 202 400 197 Z" fill="url(#plume)"/>
+
+  <!-- ship silhouette, used for the orange rim glow -->
+  <g id="shipShape">
+  </g>
+  <g fill="#f39a3c" filter="url(#soft)" opacity="0.85">
+    <path d="M748 156 L960 156 C1012 158 1046 170 1058 180 C1046 190 1012 202 960 204 L748 204 Z"/>
+    <path d="M754 156 L812 156 L800 132 L762 132 Z"/><path d="M754 204 L812 204 L800 228 L762 228 Z"/>
+    <path d="M958 156 L1000 161 L988 144 L966 144 Z"/><path d="M958 204 L1000 199 L988 216 L966 216 Z"/>
+  </g>
+  <g fill="#f39a3c" filter="url(#wide)" opacity="0.35"><rect x="400" y="156" width="660" height="48"/></g>
+
+  <!-- Super Heavy (stainless) -->
+  <g fill="url(#steel)">
+    <rect x="400" y="156" width="324" height="48" rx="2"/>
+    <rect x="694" y="143" width="22" height="13" rx="1"/>
+    <rect x="694" y="204" width="22" height="13" rx="1"/>
+  </g>
+  <g fill="#15171b" opacity="0.2">
+    <rect x="480" y="156" width="2" height="48"/><rect x="560" y="156" width="2" height="48"/>
+    <rect x="640" y="156" width="2" height="48"/>
+  </g>
+
+  <!-- hot-stage ring -->
+  <rect x="724" y="156" width="24" height="48" fill="#2c323a"/>
+  <g fill="#f39a3c"><rect x="728" y="159" width="3" height="42"/><rect x="734.5" y="159" width="3" height="42"/><rect x="741" y="159" width="3" height="42"/></g>
+
+  <!-- Starship (black heat-shield tiles) -->
+  <g fill="url(#tiles)">
+    <path d="M748 156 L960 156 C1012 158 1046 170 1058 180 C1046 190 1012 202 960 204 L748 204 Z"/>
+    <path d="M754 156 L812 156 L800 132 L762 132 Z"/><path d="M754 204 L812 204 L800 228 L762 228 Z"/>
+    <path d="M958 156 L1000 161 L988 144 L966 144 Z"/><path d="M958 204 L1000 199 L988 216 L966 216 Z"/>
+  </g>
+  <!-- sunlit top edge -->
+  <path d="M748 157.5 L960 157.5 C1010 159.5 1040 169 1054 178" fill="none" stroke="#ffd9a0" stroke-width="2" opacity="0.8"/>
+</svg>
